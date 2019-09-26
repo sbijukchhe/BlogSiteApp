@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>Profile Page</title>
+</head>
+
+
+<body>
+
+<div th:insert="base :: navbar"></div>
+<br>
+
+<div class="container">
+    <div class="row">
+
+       <!--            One of two columns-->
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.facebook.com/'" >
+                        <i class="fab fa-facebook-f "></i> Facebook
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.twitter.com/'" >
+                        <i class="fab fa-twitter"></i> Twitter
+
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.instagram.com/?hl=en'" >
+                        <i class="fab fa-instagram"></i> Instagram
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+
+<!--            Two of two columns-->
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Mary Smith</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.facebook.com/'" >
+                        <i class="fab fa-facebook-f "></i> Facebook
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.twitter.com/'" >
+                        <i class="fab fa-twitter"></i> Twitter
+
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.instagram.com/?hl=en'" >
+                        <i class="fab fa-instagram"></i> Instagram
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+
+<!-- End of one row in container -->
+    </div>
+<!-- End of container -->
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--Footer-->
+<div th:insert="base :: footer" ></div>
+
+</body>
+</html>
