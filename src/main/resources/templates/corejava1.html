@@ -1,10 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <title>Java Data Types</title>
 </head>
+
 <body>
-Java Data Types
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3> Java Data Types </h3>
+            </div>
+
+            <br>
+
+            <p>Data type defines the values that a variable can take, for example if a variable has int data type, it
+                can only take integer values. In java we have two categories of data type: 1) Primitive data types
+                2) Non-primitive data types – Arrays and Strings are non-primitive data types, we will discuss them
+                later in the coming tutorials. Here we will discuss primitive data types and literals in Java.
+            </p>
+            <p>
+                Java is a statically typed language. A language is statically typed, if the data type of a variable is
+                known at compile time. This means that you must specify the type of the variable (Declare the variable)
+                before you can use it.
+                In the last tutorial about Java Variables, we learned how to declare a variable, lets recall it:
+
+                <b>int num;</b>
+                So in order to use the variable num in our program, we must declare it first as shown above.
+                It is a good programming practice to declare all the variables ( that you are going to use) in
+                the beginning of the program.
+            </p>
+            <p>
+                <h6>1) Primitive data types</h6>
+                In Java, we have eight primitive data types: boolean, char, byte, short, int, long, float and double.
+                Java developers included these data types to maintain the portability of java as the size of these
+                primitive data types do not change from one operating system to another.
+            </p>
+            <p>
+                <h6>1) Reference types</h6>
+                A reference type is a data type that’s based on a class rather than on one of the primitive types
+                that are built in to the Java language. The class can be a class that’s provided as part of the Java
+                API class library or a class that you write yourself.
+            </p>
+            <p>
+                Either way, when you create an object from a class, Java allocates the amount of memory the object
+                requires to store the object. Then, if you assign the object to a variable, the variable is actually
+                assigned a reference to the object, not the object itself. This reference is the address of the memory
+                location where the object is stored.
+                To declare a variable using a reference type, you simply list the class name as the data type.
+                For example, the following statement defines a variable that can reference objects created from a class
+                named Ball:
+                <b>Ball b; </b>
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

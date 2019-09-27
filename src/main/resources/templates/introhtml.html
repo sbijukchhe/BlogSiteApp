@@ -1,10 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <title>Introduction to HTML</title>
 </head>
+
 <body>
-Introduction to HTML
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3>Introduction to HTML </h3>
+            </div>
+
+            <br>
+
+            <p>
+                HTML stands for Hyper Text Markup Language. It is used to design web pages using markup language.
+                HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web
+                pages. Markup language is used to define the text document within tag which defines the structure of
+                web pages. This language is used to annotate (make notes for the computer) text so that a machine can
+                understand it and manipulate text accordingly. Most of markup (e.g. HTML) languages are human readable.
+                Language uses tags to define what manipulation has to be done on the text.
+                HTML is a markup language which is used by the browser to manipulate text, images and other content to
+                display it in required format. HTML was created by Tim Berners-Lee in 1991. The first ever version of
+                HTML was HTML 1.0 but the first standard version was HTML 2.0 which was published in 1999.
+            </p>
+
+            <p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell
+                your browser how to structure the web pages you visit. It can be as complicated or as simple as the web
+                developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or
+                mark up different parts of the content to make it appear or act a certain way. The enclosing tags can
+                make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.
+                JavaScript-based design templates for typography, forms,
+                buttons, navigation and other interface components.
+            </p>
+
+            <p>
+            <h5>Elements and Tag:</h5> HTML uses predefined tags and elements which tells the browser about content
+            display property. If a tag is not closed then browser applies that effect till end of page.
+            </p>
+            <p>
+                The main parts of our element are:
+
+                <b>The opening tag:</b> This consists of the name of the element (in this case, p), wrapped in opening
+                and closing angle brackets. This states where the element begins or starts to take effect — in this case
+                where the start of the paragraph is.
+                <b>The closing tag:</b> This is the same as the opening tag, except that it includes a forward slash
+                before the element name. This states where the element ends — in this case where the end of the
+                paragraph is.
+                Failing to include a closing tag is a common beginner error and can lead to strange results.
+                <b>The content:</b> This is the content of the element, which in this case is just text.
+                <b>The element:</b> The opening tag plus the closing tag plus the content equals the element.
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

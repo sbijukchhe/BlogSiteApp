@@ -1,10 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>The GitHub Student Developer Pack is back</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>GitHub </title>
 </head>
+
 <body>
-The GitHub Student Developer Pack is back
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3> GitHub </h3>
+            </div>
+
+            <br>
+
+            <p>GitHub is a web-based version-control and collaboration platform for software developers. Microsoft,
+                the biggest single contributor to GitHub, initiated an acquisition of GitHub for $7.5 billion in June,
+                2018. GitHub, which is delivered through a software-as-a-service (SaaS) business model, was started in
+                2008 and was founded on Git, an open source code management system created by Linus Torvalds to make
+                software builds faster.
+            </p>
+            <p>
+                Git is used to store the source code for a project and track the complete history of all changes to that
+                code. It allows developers to collaborate on a project more effectively by providing tools for managing
+                possibly conflicting changes from multiple developers. GitHub allows developers to change, adapt and
+                improve software from its public repositories for free, but it charges for private repositories,
+                offering various paid plans. Each public or private repository contains all of a project's files, as
+                well as each file's revision history. Repositories can have multiple collaborators and can be either
+                public or private.
+            </p>
+            <p>
+                GitHub facilitates social coding by providing a web interface to the Git code repository and management
+                tools for collaboration. GitHub can be thought of as a serious social networking site for software
+                developers. Members can follow each other, rate each other's work, receive updates for specific projects
+                and communicate publicly or privately.
+            </p>
+            <p>
+                Three important terms used by developers in GitHub are fork, pull request and merge. A fork, also known
+                as a branch, is simply a repository that has been copied from one member's account to another member's
+                account. Forks and branches allow a developer to make modifications without affecting the original code.
+                If the developer would like to share the modifications, she can send a pull request to the owner of the
+                original repository. If, after reviewing the modifications, the original owner would like to pull the
+                modifications into the repository, she can accept the modifications and merge them with the original
+                repository. Commits are, by default, all retained and interleaved onto the master project, or can be
+                combined into a simpler merge via commit squashing.
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

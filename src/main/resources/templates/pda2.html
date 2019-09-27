@@ -1,10 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <title>Fundamentals of program design</title>
 </head>
+
 <body>
-Fundamentals of program design
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3> Fundamentals of program design </h3>
+            </div>
+
+            <br>
+
+            <p>Every computer program is built from components, data, and control.
+
+                For a single-user application (used by one person at a time), which normally reads data, saves it in
+                a data structure, computes on the data, and writes the results, there is a standard way of organizing
+                the component structure, data structure, and control structure:
+
+            </p>
+            <p>
+                First, design the program's component structure with three components, organized in a
+                model-view-controller pattern.
+                Next, decide what form of data structure (array, table, set, list, tree, etc.) will hold the program's
+                data. The data structure will be inserted in the program's model component.
+                Then, write the algorithm that defines the execution steps --- the control structure. The algorithm
+                will be placed inside the program's controller.
+            </p>
+            <p>
+                Determine the form of input and output (disk file, typed text in a command window, dialogs, a
+                graphical-use interface, etc.) that the program uses. This will be embedded in the program's view.
+                Once the four-step design is finished, then it is time to convert the design into (Java) coding.
+                We now consider each stage of the design process.
+            </p>
+            <p>
+                The program can be written as one large piece of code, but this forces a programmer to think about all
+                parts of the program at once. Years of experience has shown that it is better to design a program in
+                three parts, in a model-view-controller pattern:
+                The data flows into the program through the view component and is directed by the controller into the
+                model. The controller component manipulates the data and tells the view to output the answer. A bit more
+                precisely, we have that
+                The controller component holds the algorithm, that is the instructions that tell the computer when to
+                read data, compute on it, and write the answers.
+                The model component holds the structures that save the data so that it can be easily computed upon.
+                For example, if the program is a spreadsheet program, then the model holds a table (grid) that
+                represents (``models'') the spreadsheet. Or, if the program is the file manager for Linux, then the
+                model is a tree structure that represents the folder-and-file structure of the disk-file system.
+                The view component holds the operations that connect the program to the input and output devices
+                (the disk or display or printer....).
+                All three components are important, but the key to building a good quality program is selecting the
+                appropriate data structure for the model component.
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

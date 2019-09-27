@@ -103,9 +103,9 @@
 
 
     <div class="alert alert-primary" role="alert">
-        <h4>The GitHub Student Developer Pack is back</h4>
-        <p><i>09/26/2019</i></p>
-        <p>The GitHub Student Developer Pack is back for another school year.
+        <h4>GitHub</h4>
+        <p><i>09/26/2019</i></p>GitHub is a web-based version-control and collaboration platform for software
+        developers.
             <a href="/github2" class="card-link">View more...</a> </p>
     </div>
 
@@ -183,32 +183,8 @@
 
 <!--        Column 2-->
         <div class="col-sm-4"  style="padding-left: 7%">
-                <!--            <div class="card text-center" style="width: 18rem;">-->
-
-                <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="padding-left: 12%">Subscribe this blog</h5>
-                        <br>
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleFormControlInput1">Email address</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1"
-                                       placeholder="name@example.com">
-                            </div>
-                        </form>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                   value="option1" >
-                            <label class="form-check-label" for="exampleRadios1"> Unsubscribe me </label>
-                        </div>
-                        <br>
-                        <a href="#" class="btn btn-primary">Subscribe me</a>
-                    </div>
-                </div>
-            </div>
-
-
+            <div th:insert="base :: subscribe"></div>
+        </div>
 
 <!--        End od row-->
     </div>

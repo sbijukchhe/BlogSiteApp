@@ -1,10 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <title>Highlights from Git 2.23</title>
 </head>
+
 <body>
-Highlights from Git 2.23
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3> Highlights from Git 2.23 </h3>
+            </div>
+
+            <br>
+
+            <p>Git 2.23 brings a new pair of experimental commands to the suite of existing ones: git switch and git
+                restore. These two are meant to eventually provide a better interface for the well-known git checkout.
+                The new commands intend to each have a clear separation, neatly divvying up what the many
+                responsibilities of git checkout.
+            </p>
+            <p>
+                It turns out git checkout can do quite a lot. You can use it to change branches with git
+                checkout <branch> or if you supply --branch, create a new branch
+                (as in git checkout --branch <new-branch>). If you don’t want to switch branches, don’t worry, because
+                    git checkout can change individual files, too.  If you write git checkout -- <filename>, you will
+                        reset <filename> in your working copy to be equivalent with what’s in your index. If you don’t
+                            want to take changes from the index, you can specify an alternative source with git
+                            checkout [treeish] -- <filename>.
+            </p>
+            <p>
+                The new commands, by contrast, aim to clearly separate the responsibilities of git checkout into two
+                narrower categories: operations which change branches and operations which change files. To that end,
+                git switch takes care of the former, and git restore the latter. For our purposes, let’s take a look at
+                each one in more detail.
+            </p>
+            <p>
+                "git restore", on the other hand, makes it much easier to figure out exactly which files will change,
+                what they’ll change to, and where they’ll change. Instead of remembering the tangled semantics of git
+                checkout, git restore provides two options to specify where your restored changes will go. If you pass
+                --worktree (or don’t pass anything at all), the changes go into your working copy. If you pass --staged,
+                they go into your index. Finally, if you pass both, the two are both changed to the same contents.
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

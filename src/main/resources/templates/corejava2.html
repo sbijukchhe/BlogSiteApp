@@ -1,10 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Java Exception Handling</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>Java Exceptional Handling</title>
 </head>
+
 <body>
-Java Exception Handling
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3> Java Exceptional Handling </h3>
+            </div>
+
+            <br>
+
+            <p><h5>Exception Object</h5>
+                An exception object is an instance of an exception class. It gets created and handed to the Java runtime
+                when an exceptional event occurred that disrupted the normal flow of the application. This is called
+                “to throw an exception” because in Java you use the keyword “throw” to hand the exception to the
+                runtime. When a method throws an exception object, the runtime searches the call stack for a piece of
+                code that handles it.
+            </p><br>
+            <p>
+               <h5>Checked And Unchecked Exceptions in Java</h5>
+            1) Checked are the exceptions that are checked at compile time. If some code within a method throws a
+            checked exception, then the method must either handle the exception or it must specify the exception using
+            throws keyword.
+            </p>
+            <p>
+                2) Unchecked are the exceptions that are not checked at compiled time. In C++, all exceptions are
+                unchecked, so it is not forced by the compiler to either handle or specify the exception. It is up to
+                the programmers to be civilized, and specify or catch the exceptions.
+                In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else
+                under throwable is checked.
+            </p><br>
+            <p>
+            <h5>How to Handle an Exception</h5>
+                Java provides two different options to handle an exception. You can either use the try-catch-finally
+                approach to handle all kinds of exceptions. Or you can use the try-with-resource approach which allows
+            an easier cleanup process for resources.
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <title>Java Inheritance</title>
 </head>
+
 <body>
-Java Inheritance
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+
+<!--Grid-->
+<div class="container">
+    <div class="row">
+
+        <!--        Column 1-->
+        <!--        Text goes here-->
+        <div class="col-sm-8">
+            <div class="alert alert-primary" role="alert">
+                <h3> Java Inheritance </h3>
+            </div>
+
+            <br>
+
+            <p>Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a
+                parent object. It is an important part of OOPs (Object Oriented programming system). The idea behind
+                inheritance in Java is that you can create new classes that are built upon existing classes.
+                Inheritance
+                is an important pillar of OOP(Object Oriented Programming). It is the mechanism in java by
+                which one class is allow to inherit the features(fields and methods) of another class.
+
+            </p>
+            <p>
+            <h5> Important terminology:</h5>
+
+            <b>Super Class:</b> The class whose features are inherited is known as super class(or a base class or a
+            parent class).
+
+            </p>
+            <p>
+                <b>Sub Class:</b> The class that inherits the other class is known as sub class(or a derived class,
+                extended
+                class, or child class). The subclass can add its own fields and methods in addition to the superclass
+                fields and methods.
+
+            </p>
+            <p>
+                <b>Reusability:</b> Inheritance supports the concept of “reusability”, i.e. when we want to create a
+                new class
+                and there is already a class that includes some of the code that we want, we can derive our new class
+                from the existing class. By doing this, we are reusing the fields and methods of the existing class.
+
+            </p>
+            <p>
+               <b> Note:</b>
+                The derived class inherits all the members and methods that are declared as public or protected.
+                If the members or methods of super class are declared as private then the derived class cannot use
+                them directly. The private members can be accessed only in its own class.
+            </p>
+            <!--Text end here-->
+        </div>
+
+        <!--        Column 2-->
+
+        <!--        Subscribe-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+
+            <br><br><br><br><br>
+            <div th:insert="base :: subscribe"></div>
+        </div>
+        <!--        End of Row1-->
+    </div>
+
+    <br><br><br><br><br>
+    <!--Row 2-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
+
+    <!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>
