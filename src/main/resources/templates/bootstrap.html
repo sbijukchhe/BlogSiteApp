@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>How To Make a Website with Bootstrap</title>
+</head>
+
+<body>
+
+<!--Navbar-->
+<div th:insert="base :: navbar"></div>
+<br><br>
+
+How To Make a Website with Bootstrap
+<!--Grid-->
+<div class="container">
+    <div class="row">
+<!--        Column 1-->
+        <div class="col-sm-8">
+            <h3>America's Promise Grant Program</h3>
+            <br>
+            America’s Promise Job-Driven Grant Program is a tuition-free jobs training program designed to strengthen
+            the pipeline of skilled workers to expand our region’s middle-to high-skilled workforce in in the
+            Information Technology and Cybersecurity industries. To help achieve this goal, the grant provides
+            individuals the opportunity to attain high-quality, tuition free education that leads to in-demand
+            industry-recognized credentials. To be eligible for this program, you must be either an unemployed worker,
+            and underemployed worker or have an employer attest to the fact this training will increase your value to
+            the organization. Learn more about America's Promise Grant Program and how to apply to be considered for
+            the program.
+            <br><br><br>
+            <h3>What is the criteria for admission to this program?</h3>
+            <br>
+            Our ideal candidate is an Information Systems of Computer Science major who is either at least a rising
+            junior who will graduate within two years, or has graduated within the last six years.
+            The Boot Camps will feature real-world projects provided by local employers. To be eligible for this
+            program, you must be either an unemployed worker, and underemployed worker (making less than $42,000/year)
+            or have an employer attest to the fact that this training will increase your value to the organization.
+            In addition to technical training, participants will also receive one-on-one career navigator guidance to
+            assist them with their employment goals. Boot camps are scheduled during daytime hours and typically run
+            Monday to Friday from 9:00a.m. to 5:00p.m.
+
+        </div>
+
+<!--        Column 2-->
+        <div class="col-sm-4" style="padding-left: 7%" >
+<!--            <div class="card text-center" style="width: 18rem;">-->
+            <br><br><br><br><br><br><br>
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title" style="padding-left: 12%">Subscribe this blog</h5>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                   placeholder="name@example.com">
+                        </div>
+                    </form>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                               value="option1" >
+                        <label class="form-check-label" for="exampleRadios1"> Unsubscribe me </label>
+                    </div>
+                    <br>
+                    <a href="#" class="btn btn-primary">Subscribe me</a>
+                </div>
+            </div>
+        </div>
+<!--        End of Row1-->
+    </div>
+
+
+
+<br><br><br><br><br>
+<!--Row 2-->
+<div class="row">
+<!--Text area-->
+    <div th:insert="base :: textarea"></div>
+
+<!--End of Row2-->
+</div>
+
+<!--    End of container-->
+</div>
+
+<br><br>
+<!--Footer-->
+<div th:insert="base :: footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

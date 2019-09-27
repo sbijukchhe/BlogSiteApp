@@ -63,32 +63,118 @@
 <!--</div>-->
 
 <!--Navbar-->
+<!--<div th:fragment="navbar">-->
+<!--    <nav class="navbar navbar-expand-lg navbar-light bg-primary">-->
+<!--        <a class="navbar-brand" href="/">MyBlog</a>-->
+<!--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"-->
+<!--                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">-->
+<!--            <div class="navbar-nav">-->
+<!--                <a class="nav-item nav-link active text-white" href="/">Home </a>-->
+<!--                <a class="nav-item nav-link text-white" href="/profile">Profilepage</a>-->
+<!--                <a class="nav-item nav-link text-white" href="/entry">Entry</a>-->
+<!--                <a class="nav-item nav-link text-white" href="/about" >About</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
+<!--        </form>-->
+<!--    </nav>-->
+<!--</div>-->
+
 <div th:fragment="navbar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="/home">MyBlog</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active text-white" href="/home">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link text-white" href="/profile">Profile Page</a>
-                <a class="nav-item nav-link text-white" href="/entry">Entry</a>
-                <a class="nav-item nav-link text-white" href="/about" tabindex="-1" >About</a>
-            </div>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <a class="navbar-brand" href="/">MyBlog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="/">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="/profile">ProfilePage</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle  text-white" href="#" id="navbarDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entries
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/corejava1">Core Java 1</a>
+                    <a class="dropdown-item" href="/corejava2">Core Java 2</a>
+                    <a class="dropdown-item" href="/github1">GitHub 1</a>
+                    <a class="dropdown-item" href="/github2">GitHub 2</a>
+                    <a class="dropdown-item" href="/oopjava1">OOP Java 1</a>
+                    <a class="dropdown-item" href="/oopjava2">OOP Java 2</a>
+                    <a class="dropdown-item" href="/pda1">PD&A 1</a>
+                    <a class="dropdown-item" href="/pda2">PD&A 2</a>
+                    <a class="dropdown-item" href="/bootstrap">BootStrap</a>
+                    <a class="dropdown-item" href="/introhtml">HTML</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="/about">About</a>
+            </li>
+        </ul>
         <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+    </div>
+</nav>
 </div>
+
+
+<!--Text Area-->
+<div th:fragment="textarea">
+    <form>
+        <h4>Questions / Comments:</h4>
+        <br>
+        <textarea rows="4" cols="125">
+
+    </textarea>
+        <br>
+        <button class="btn btn-primary" type="submit">Post</button>
+    </form>
+</div>
+
+
 
 <!--Footer-->
 <div th:fragment="footer">
-    <div class="alert alert-success" role="alert">
-        <p>&copy;2019</p>
+    <div class="alert alert-info" role="alert">
+        <div class="row justify-content-rt-center">
+            <div class="col">
+        &copy;2019
+            </div>
+            <div class="col">
+            <!--Facebook-->
+            <button type="button" class="btn btn-fb" onClick="parent.location='https://www.facebook.com/'">
+                <i class="fab fa-facebook-f pr-1"></i> Facebook</button>
+            <!--Twitter-->
+            <button type="button" class="btn btn-tw" onClick="parent.location='https://www.twitter.com/'">
+                <i class="fab fa-twitter pr-1" ></i> Twitter</button>
+            <!--Google +-->
+            <button type="button" class="btn btn-gplus" onClick="parent.location='https://www.google.com/'">
+                <i class="fab fa-google-plus-g pr-1"></i> Google +</button>
+            <!--Linkedin-->
+            <button type="button" class="btn btn-li" onClick="parent.location='https://www.linkedin.com/'">
+                <i class="fab fa-linkedin-in pr-1"></i> Linkedin</button>
+            <!--Instagram-->
+            <button type="button" class="btn btn-ins" onClick="parent.location='https://www.instagram.com/'">
+                <i class="fab fa-instagram pr-1"></i> Instagram</button>
+            <!--Pinterest-->
+            <button type="button" class="btn btn-pin" onClick="parent.location='https://www.pinterest.com/'">
+                <i class="fab fa-pinterest pr-1"></i> Pinterest</button>
+        </div>
+        </div>
         <p>Blog reading is a fun.......</p>
     </div>
 </div>

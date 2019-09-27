@@ -13,16 +13,22 @@
 
 <body>
 
+<!--Navbar-->
 <div th:insert="base :: navbar"></div>
 <br>
-
+<div class="alert alert-info" role="alert">
+    <h3 align="center">Meet the Blog Authors!</h3>
+</div>
+<br><br>
 <div class="container">
-    <div class="row">
+
+<!--    Row one of three-->
+    <div class="row justify-content-rt-center">
 
        <!--            One of two columns-->
-        <div class="col-sm">
+        <div class="col">
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img th:src="@{/images/human5.png}" class="card-img-top" alt="Author 1">
                 <div class="card-body">
                     <h5 class="card-title">John Doe</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -46,14 +52,24 @@
                                                         onClick="parent.location='https://www.instagram.com/?hl=en'" >
                         <i class="fab fa-instagram"></i> Instagram
                     </button></li>
+
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.github.com/'" >
+                        <i class="fab fa-github"></i> GitHub
+                    </button></li>
                 </ul>
             </div>
         </div>
 
-<!--            Two of two columns-->
-        <div class="col-sm">
+<!--        Two of three columns-->
+        <div class="col">
+        </div>
+
+<!--            Three of three columns-->
+        <div class="col">
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="../images/human6.jpg" class="card-img-top" alt="Author2">
                 <div class="card-body">
                     <h5 class="card-title">Mary Smith</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -76,18 +92,144 @@
                                                         onClick="parent.location='https://www.instagram.com/?hl=en'" >
                         <i class="fab fa-instagram"></i> Instagram
                     </button></li>
+
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.github.com/'" >
+                        <i class="fab fa-github"></i> GitHub
+                    </button></li>
                 </ul>
             </div>
         </div>
 
 <!-- End of one row in container -->
     </div>
+
+    <br><br><br>
+<!--    Row two of three-->
+    <div class="row justify-content-rt-center">
+
+<!--   Col 1    -->
+    <div class="col">
+    </div>
+
+
+    <div class="col">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/go4wo4WenQQ" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+    </div>
+
+<!--        <div class="embed-responsive embed-responsive-16by9">-->
+<!--            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/go4wo4WenQQ" allowfullscreen>-->
+<!--            </iframe>-->
+<!--        </div>-->
+
+<!--        col 3-->
+    <div class="col">
+    </div>
+
+<!--    End of row 2-->
+</div>
+
+
+<br><br><br>
+
+    <!--    Row three of three-->
+    <div class="row justify-content-rt-center">
+        <!--            One of two columns-->
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="../images/human4.jpg" class="card-img-top" alt="Author3">
+                <div class="card-body">
+                    <h5 class="card-title">John Doe</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.facebook.com/'" >
+                        <i class="fab fa-facebook-f "></i> Facebook
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.twitter.com/'" >
+                        <i class="fab fa-twitter"></i> Twitter
+
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.instagram.com/?hl=en'" >
+                        <i class="fab fa-instagram"></i> Instagram
+                    </button></li>
+
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.github.com/'" >
+                        <i class="fab fa-github"></i> GitHub
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--        Two of three columns-->
+        <div class="col">
+        </div>
+
+        <!--            Three of three columns-->
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="../images/human1.jpg" class="card-img-top" alt="Author4">
+                <div class="card-body">
+                    <h5 class="card-title">Mary Smith</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.facebook.com/'" >
+                        <i class="fab fa-facebook-f "></i> Facebook
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.twitter.com/'" >
+                        <i class="fab fa-twitter"></i> Twitter
+
+                    </button></li>
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.instagram.com/?hl=en'" >
+                        <i class="fab fa-instagram"></i> Instagram
+                    </button></li>
+
+                    <li class="list-group-item"><button type="button"
+                                                        class="btn btn-fb btn-primary col-sm-offset-2"
+                                                        onClick="parent.location='https://www.github.com/'" >
+                        <i class="fab fa-github"></i> GitHub
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+
+<!--End of row 3-->
+    </div>
+
+    <br><br><br>
+    <!--Row 4-->
+    <div class="row">
+        <!--Text area-->
+        <div th:insert="base :: textarea"></div>
+
+        <!--End of Row2-->
+    </div>
 <!-- End of container -->
 </div>
 
 
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
 <!--Footer-->
 <div th:insert="base :: footer" ></div>
 
